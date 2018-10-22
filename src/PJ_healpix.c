@@ -634,6 +634,8 @@ PJ *PROJECTION(healpix) {
         P->fwd = s_healpix_forward;
         P->inv = s_healpix_inverse;
     }
+    
+    P->right = PJ_IO_UNITS_ANGULAR; /* HEALPix coordinates are in radians */
 
     return P;
 }
@@ -667,6 +669,8 @@ PJ *PROJECTION(rhealpix) {
         P->fwd = s_rhealpix_forward;
         P->inv = s_rhealpix_inverse;
     }
+    
+    P->right = PJ_IO_UNITS_ANGULAR; /* rHEALPix coordinates are in radians */
 
     return P;
 }
